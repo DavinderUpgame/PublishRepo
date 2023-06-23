@@ -53,11 +53,15 @@ dependencies {
 }
 
 publishing {
+    publications {
+        maven(MavenPublication) {
+            groupId = 'com.upgame.ccommon'
+            artifactId = 'common'
+            version = '1.0.0'
 
-
-    publications.all {
-        enabled = false
+            // Configure other publication settings (e.g., artifacts, dependencies, etc.)
+        }
     }
-
 }
+
 
