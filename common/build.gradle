@@ -55,9 +55,9 @@ dependencies {
 publishing {
     publications {
         maven(MavenPublication) {
-            groupId = 'com.upgame.ccommon'
-            artifactId = 'common'
-            version = '1.0.0'
+            groupId = 'com.github.DavinderUpgame'
+            artifactId = 'PublishRepo'
+            version = '1.0.4'
 
             // Configure other publication settings (e.g., artifacts, dependencies, etc.)
         }
