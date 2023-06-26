@@ -33,12 +33,24 @@ android {
     buildFeatures {
         viewBinding true
     }
+
+    packagingOptions {
+        resources {
+            excludes += '/META-INF/{AL2.0,LGPL2.1}'
+        }
+    }
+    publishing {
+        singleVariant("release") {
+            withSourcesJar()
+            withJavadocJar()
+        }
+    }
 }
 
 dependencies {
 
-//    implementation project(':common')
-    implementation 'com.github.DavinderUpgame:PublishRepo:1.0.3'
+    implementation project(':common')
+//    implementation 'com.github.DavinderUpgame:PublishRepo:1.0.4'
 
     implementation 'androidx.core:core-ktx:1.8.0'
     implementation 'androidx.appcompat:appcompat:1.6.1'

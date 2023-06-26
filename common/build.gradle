@@ -57,7 +57,11 @@ publishing {
         maven(MavenPublication) {
             groupId = 'com.github.DavinderUpgame'
             artifactId = 'PublishRepo'
-            version = '1.0.4'
+            version = '1.0.5'
+
+            afterEvaluate {
+                from components.release
+            }
 
             // Configure other publication settings (e.g., artifacts, dependencies, etc.)
         }
